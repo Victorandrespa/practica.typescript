@@ -1,27 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <title>Typescript</title>
+    <style>
+        .boton {
+            width: 48%;
+        }
+
+        .titulos {
+            color: rgb(202, 140, 16);
+            font-weight: bold;
+        }
+    </style>
 </head>
-<body>
 
-<h1>Practica Typescript</h1>
+<body class="container mt-4">
 
-<ul>
-    <li>Solucion 1: Promedio</li>
-    <li>Solucion 2: Area Triangulo</li>
-    <li>Solucion 3: Par o impar</li>
-    <li>Solucion 4: Mayor o Menor</li>
-    <li>Solucion 5: Potencia</li>
-    <li>Solucion 6: Inversa texto</li>
-    <li>Solucion 7: Factorial</li>
-    <li>Solucion 8: Numero Perfecto</li>
-    <li>Solucion 9: Numero Primo</li>
-    <li>Solucion 10: Vocales en texto</li>
-</ul>
 
-    
+    <h1 class="mt-5">Practica Typescript</h1>
+    <br>
+    <h3>Soluciones:</h3>
+
+    <div class="d-flex justify-content-around mt-3">
+
+        <div class="d-grid gap-2 boton">
+            <a href="vistas/solucion1.html" class="btn btn-outline-dark">1. Promedio</a>
+            <a href="vistas/solucion2.html" class="btn btn-outline-warning">2. Area Triangulo</a>
+            <a href="vistas/solucion3.html" class="btn btn-outline-dark">3. Pao o Impar</a>
+            <a href="vistas/solucion4.html" class="btn btn-outline-warning">4. Mayor o menor</a>
+            <a href="vistas/solucion5.html" class="btn btn-outline-dark">5. Potencia</a>
+        </div>
+
+        <div class="d-grid gap-2 boton">
+            <a href="vistas/solucion6.html" class="btn btn-outline-dark">6. Inversa de texto</a>
+            <a href="vistas/solucion7.html" class="btn btn-outline-warning">7. Factorial</a>
+            <a href="vistas/solucion8.html" class="btn btn-outline-dark">8. Perfecto</a>
+            <a href="vistas/solucion9.html" class="btn btn-outline-warning">9. Primo</a>
+            <a href="vistas/solucion10.html" class="btn btn-outline-dark">10. Vocales</a>
+
+        </div>
+
+    </div>
+
+
+    <br><br>
+    <h3>Que es Typescript?</h3>
+
+    <p style="text-align: justify;">
+        TypeScript es un lenguaje de programación desarrollado por Microsoft que extiende a JavaScript agregándole
+        tipado estático (definir el tipo de una variable, parámetro o función) y otras características útiles para el
+        desarrollo de aplicaciones a gran escala. TypeScript te permite especificar los tipos de datos (como string,
+        number, boolean, array, etc.), lo cual ayuda a evitar errores comunes desde la etapa de desarrollo.
+    </p>
+
+    <h5 class="titulos">Ventajas de typescript frente a javascript puro</h5>
+    <br>
+    <div>
+        <h6>Tipado estatico</h6>
+        <ul>
+            <li>Declara tipos de datos </li>
+            <li>Detecta errores en tiempo de desarrollo</li>
+            <li>Mejora la autocompletacion y documentacion automatica en los editores de codigo</li>
+        </ul>
+        <h6>Mejor mantenimiento del codigo</h6>
+        <ul>
+            <li>Hace que el codigo sea mas legible y facil de mantener, especielmente en equipos grandes</li>
+            <li>Ayuda a entender como interactuan los distintos componentes</li>
+        </ul>
+        <h6>Compilable con javascript</h6>
+        <ul>
+            <li>Typescript es como un superset de Javascript, lo que significa que todo el codigo Javascript es valido
+                en
+                Typescript</li>
+            <li>Se puede migrar un proyecto poco a poco a TS</li>
+        </ul>
+        <h6>Mejor soporte en editores </h6>
+        <ul>
+            <li>Autocompletado mas inteligente</li>
+            <li>Navegacion facil</li>
+            <li>Documentacion emergente y sugerencias</li>
+        </ul>
+        <h6>Mejora la integracion de Frameworks modernos</h6>
+        <ul>
+            <li>Frameworks como Angular estan escritos en typescript</li>
+        </ul>
+        <h6>Deteccion temprana de errores</h6>
+        <ul>
+            <li>Compilador (tsc) te avisa antes de que el codigo se ejecute, reduciendo errores en produccion</li>
+        </ul>
+    </div>
+
+    <h5 class="titulos">Como se instala Typescript en VS code</h5>
+
+    <div>
+        <ol>
+            <li>Descargar e instalar node.js desde la pagina oficial</li>
+            <li>Abrir terminal y verificar instalacion “node -v” , “npm -v”. Deben aparecer las versiones</li>
+            <li>En terminal escribir “npm install -g typescript”</li>
+            <li>Verificar instalacion con “tsc -v”</li>
+            <li>Iniciar un proyecto y crear una funcion de prueba</li>
+            <li>En la terminal de vs code agregar “tsc –init”, esto crea un archivo tsconfig.json</li>
+            <li>Compilar el archivo “tsc”, esto genera un archivo index.js</li>
+            <li>En la terminal “node index.js, deberias ver el resultado.
+            </li>
+        </ol>
+    </div>
+
+    <h5 class="titulos">Como se compila un archivo Typescript para convertirlo en
+        Javascript</h5>
+    <div>
+        <p>Los navegadores no entienden TypeScript directamente, por eso se transpila (convierte) a JavaScript.
+        </p>
+        <p>Usas tsc (TypeScript Compiler) para generar archivos .js a partir de .ts.
+        </p>
+    </div>
+
+    <h5 class="titulos">Que extension de archivo se utiliza para los archivos Typescript</h5>
+    <p>Los archivos Typescript utilizan la extension .ts</p>
+
+    <h5 class="titulos">Como se define el tipo de datos en Typescript</h5>
+    <p>Se define usando : seguido del tipo despues del nombre de la variable, parametro o funcion</p>
+    <p>Variables: Let nombre: string = “juan”;</p>
+    <p>Arreglos: Let numeros: numer [] = [1, 2, 3];</p>
+    <p>Objetos</p>
+    <ul>
+        <li>Let persona: { nombre: string; edad: number } = {</li>
+        <li>nombre : “carlos”,</li>
+        <li>Edad: 30</li>
+        <li>};</li>
+    </ul>
+    <p>Funciones</p>
+    <ul>
+        <li>Function sumar (a: number, b: number): number {</li>
+        <li>Return a + b ;</li>
+        <li>};</li>
+    </ul>
+    <p>Any</p>
+    <ul>
+        <li>Let dato: any = 5</li>
+        <li>dato = “texto”;</li>
+        <li>dato = true;</li>
+    </ul>
+
+    <h5 class="titulos">Que son los tipos de union y como se declaran</h5>
+    <p>Los tipos de unión (union types) en TypeScript te permiten declarar una variable que puede ser de más de un tipo.
+        Se declaran usando el símbolo | (pipe) entre los tipos posibles.</p>
+
+    <h5 class="titulos">Que es un tipo literal en Typescript y para que se utiliza</h5>
+    <p>En TypeScript, un tipo literal es un tipo que representa valores específicos y exactos, no solo un tipo general
+        como string o number, sino un valor concreto, como "activo" o 3.14.</p>
+    <p>Se usa para: Restringir valores posibles, crear tipos mas seguros y predecibles, validar de forma estricta que
+        solo se usen ciertos valores.</p>
+
+    <h5 class="titulos">Que son los tipos enumerados (Enums) y como se crean</h5>
+    <p style="text-align: justify;">Los tipos enumerados o Enums en TypeScript son una forma de definir un conjunto de
+        valores con nombre, que
+        representan un grupo fijo de constantes relacionadas. Sirven para manejar valores simbólicos legibles en lugar
+        de usar números o strings sueltos.</p>
+    <ul>
+        <li>enum Estado{</li>
+        <li>Activo,</li>
+        <li>Inactivo,</li>
+        <li>Pendiente</li>
+        <li>}</li>
+    </ul>
+
+    <h5 class="titulos">Como se define un tipo alias y cuando es util</h5>
+    <p style="text-align: justify;">Un tipo alias en TypeScript es una forma de darle un nombre a un tipo, ya sea un
+        tipo primitivo, un objeto complejo, una unión, o cualquier combinación de tipos. Se define con la palabra clave
+        type.</p>
+    <ul>
+        <li>type NombreDelTipo = tipo;</li>
+        <li>type Edad = number;</li>
+        <li>let miEdad: Edad = 30;</li>
+    </ul>
+
+    <h5 class="titulos">Como se definen las funciones con tipos en typescript</h5>
+    <p>En TypeScript, puedes definir funciones con tipos para los parámetros y el tipo de retorno, lo que ayuda a que
+        el código sea más seguro y claro.</p>
+    <p>function sumar (a: number, b: number): number</p>
+
+    <h5 class="titulos">Que son los parametros opcionales y los parametros predeterminados en funciones</h5>
+    <h6>Parámetros Opcionales</h6>
+    <ul>
+        <li>Son parámetros que pueden o no recibirse al llamar a la función</li>
+        <li>Se indican agregando un signo de interrogación ? después del nombre del parámetro.</li>
+        <li>Si no se pasa el argumento, el valor será undefined dentro de la función.</li>
+    </ul>
+
+    <h6>Parametros Predeterminados (Default Parameters)</h6>
+    <ul>
+        <li>Son parametros que tienen un valor por defecto si no se proporciona uno al llamar la funcion</li>
+        <li>Se definen asignando un valor directamente en la firma de la funcion.</li>
+        <li>Si no se pasa el argumento, se usa el valor por defecto.</li>
+    </ul>
+
+    <h5 class="titulos">Cuales son algunas mejoras practicas para escribir codigo limpio y mantenible en Typescript</h5>
+    <p>Escribir código limpio y mantenible en TypeScript no solo mejora la legibilidad, sino que también hace que tu
+        proyecto sea más escalable y fácil de depurar.</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
